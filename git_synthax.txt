@@ -1,0 +1,56 @@
+Utile : 
+git clone https://github.com/blegat/LINMA1691.git
+
+
+
+git pull (avant de commencer à travailler faut pull mais avec un commit avant:
+ git commit -am "message bidon" 
+ git pull (gérer conflits dans le fichier s'il y en a)
+ (après tu environ refais commit et pull sera up-to-date donc un petit push pour que le site soit avec la bonne version )
+ 
+ et si on te demande 
+	tu dois pas enregistrer les changements)
+changements
+	Nouveau fichier: git add --all ou git add filename
+git commit -am "description de la modif" (enregistre chez toi) % -a ne marche pas ..  
+git pull (update ce qui est en ligne, il te dit le sconflits, open documents et gère les conflits dans le doc )
+git commit-am (facultatif je crois )
+git push
+mettre pass word et identifiant 
+UserName: FlorentinG
+mdp : pmolik45
+
+
+
+Inutile: 
+
+git init
+git status
+git add filename.txt
+
+
+
+
+warning: push.default n'est pas défini ; sa valeur implicite change dans Git 2.0
+de 'matching' vers 'simple'. Pour supprimer ce message et maintenir
+le comportement actuel après la modification de la valeur de défaut, utilisez :
+
+  git config --global push.default matching
+
+Pour supprimer ce message et adopter le nouveau comportement maintenant, utilisez :
+
+  git config --global push.default simple
+
+Quand push.default vaudra 'matching', git poussera les branches locales
+sur les branches distantes qui existent déjà avec le même nom.
+
+Dans Git 2.0 Git utilisera par défaut le comportement plus conservatif 'simple'
+qui ne pousse la branche courante vers la branche distante que 'git pull' utilise
+pour mettre à jour la branche courante.
+ 
+Voir 'git help config' et chercher 'push.default' pour plus d'information.
+(le mode 'simple' a été introduit dans Git 1.7.11. Utilisez le mode similaire
+'current' au lieu de 'simple' si vous utilisez de temps en temps d'anciennes versions de Git)
+
+
+
