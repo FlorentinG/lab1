@@ -1,9 +1,9 @@
 function [] = LAB1_21()
 %LAB1_21 
-K = [0 1 4 8];
-k = {'0','1','4','8'};
+close all;
+K = [0 1 4 6];
 u0 = [1 1 1]';
-N = 1000;
+N = 100;
 u = [u0 zeros(3,N)];
 tfinal = 10;
 h = tfinal/N;
@@ -23,6 +23,7 @@ end
 %root locus
 sys = tf(1,[1 3 2 0]);
 figure;
-rlocus(sys,0:0.001:10);
+k = 0:0.005:10;
+rlocus(sys,k);
 end
 

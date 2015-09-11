@@ -39,7 +39,7 @@ y''(0)
 \end{array} \right) 
 \end{eqnarray*}
 
-The solutions, computed analytically for different values of K, are given in figure \ref{result21}. It is possbile to see that for the first three values of K, the maximal amplitude of the blue curve (that is the function $y$) tends to decrease. This being an LCC system, we know that a perturbation will follow the same ODE so we can conclude that the system is stable for those values of K. On the other hand, for the last value ($K=8$), this amplitude increases.
+The solutions, computed analytically for different values of K, are given in figure \ref{result21}. The Matlab code is given at the end of this section. It is possbile to see that for the first three values of K, the maximal amplitude of the blue curve (that is the function $y$) tends to decrease. This being an LCC system, we know that a perturbation will follow the same ODE so we can conclude that the system is stable for those values of K. On the other hand, for the last value ($K=8$), this amplitude increases. Hence, the system is not stable for $K=8$. By continuity, that means that the system becomes unstable for a value of K between $4$ and $8$. Because we know nothing else, the best estimation that we can give right now is that this value is $K=6$.\\
 
 \begin{figure}
 \begin{center}
@@ -48,6 +48,8 @@ The solutions, computed analytically for different values of K, are given in fig
 \label{result21}
 \end{center}
 \end{figure}
+
+We then drew a root locus to see how the system would evolve if K varies continuously. 
 
 
 %Ce truc insere mon code MATLAB (nice!) 
