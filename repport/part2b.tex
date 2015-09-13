@@ -1,3 +1,29 @@
 %part2b.tex
 \subsection*{b. Stability of the critical points of a nonlinear ODE-system}
 
+In this section, we will look at the stability. As this sytem is nonlinear, we have to analyse the stability of the critical points with the help of the jacobian. For this system, the jacobian is analytically given by : 
+
+$$D_f(\textbf{u}) = \left(\begin{array}{ccc}
+5-u_3 & 4 & -u_1 \\ 
+1 & 4-u_3 & -u_2 \\ 
+2u_1 & 2u_2 & 0
+\end{array} \right)$$
+
+This jacobian is a function of $\textbf{u}$ but we are only interested in the stability of the critical points. So we only have to check the eigenvalues of $D_f(\textbf{u}^*)$ where \textbf{u$^*$} is a solution of the equation $f(\textbf{u})=0$.
+
+So we first have to compute all the critical points. There are four of them. The Matlab code shown at the end of this section is used to do that. We have used the built-in function $fsolve$. This give the following critical points, numeroted $u^i$ : 
+$$\begin{array}{|c|c|c|c|}
+\hline
+u^1 & u^2 & u^3 & u^4 \\ 
+\hline
+7.9446 & -7.9446 & 8.7881 & -8.7881 \\ 
+-5.0876 & 5.0876 & 3.4308 & -3.4308 \\ 
+2.4384 & 2.4384 & 6.5616 & 6.5616\\
+\hline
+\end{array} $$
+
+
+
+
+%Ce truc insere mon code MATLAB (nice!) 
+\lstinputlisting{LAB1_22.m}
