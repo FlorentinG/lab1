@@ -11,10 +11,10 @@ $$D_f(\textbf{u}) = \left(\begin{array}{ccc}
 
 This jacobian is a function of $\textbf{u}$ but we are only interested in the stability of the critical points. So we only have to check the eigenvalues of $D_f(\textbf{u}^*)$ where \textbf{u$^*$} is a solution of the equation $f(\textbf{u})=0$.
 
-So we first have to compute all the critical points. There are four of them. The Matlab code shown at the end of this section is used to do that. We have used the built-in function $fsolve$. This give the following critical points, numeroted $u^i$ : 
+So we first have to compute all the critical points. There are four of them. The Matlab code shown at the end of this section is used to do that. We have used the built-in function $fsolve$. This give the following critical points, numeroted $\textbf{u}^i$ : 
 $$\begin{array}{|c|c|c|c|}
 \hline
-u^1 & u^2 & u^3 & u^4 \\ 
+\textbf{u}^1 & \textbf{u}^2 & \textbf{u}^3 & \textbf{u}^4 \\ 
 \hline
 7.9446 & -7.9446 & 8.7881 & -8.7881 \\ 
 -5.0876 & 5.0876 & 3.4308 & -3.4308 \\ 
@@ -22,7 +22,16 @@ u^1 & u^2 & u^3 & u^4 \\
 \hline
 \end{array} $$
 
-
+The jacobian of the preceding critical points have the following eigenvalues : 
+$$\begin{array}{|c|c|c|c|}
+\hline
+\sigma_D(\textbf{u}^1) & \sigma_D(\textbf{u}^2) & \sigma_D(\textbf{u}^3) & \sigma_D(\textbf{u}^4) \\ 
+\hline
+13.3417j & 13.3417j & 13.3417j & 13.3417j \\ 
+-13.3417j & -13.3417j & -13.3417j & -13.3417j \\ 
+4.1231 & 4.1231 & -4.1231 & -4.1231\\
+\hline
+\end{array} $$
 
 
 %Ce truc insere mon code MATLAB (nice!) 
