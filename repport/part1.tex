@@ -1,26 +1,43 @@
 \section*{Part 1. Solution of ODE-systems with constant coefficients}
 
-In the electrical circuit that follows, we define the variable $\dot{q}=i$.
-\red{dessin du circuit to come, je sais pas si on a vraiment besoin...}
-The RLC circuit is described by the equation
-$$L\ddot{q}+R\dot{q}+\frac{1}{C}q = E,\hspace*{5mm}q(0)=0,\hspace*{5mm}\dot{q}(0)=0.$$
-
-We easily rewrite this as a first order system of linear equations. Setting $y_1=q$ and $y_2=\dot{q}$, this gives
-
-
-$$ \left.\begin{array}{lll}
-\dot{y_1} & = & y_2\\
-\dot{y_2} & = & -\frac{R}{L}y_2 - \frac{1}{LC}y_1 + E
-\end{array}\right. $$
-
+Starting from the described electrical circuit, we get the differential equation
+$$L\ddot{q}+R\dot{q}+\frac{1}{C}q = E,\hspace*{5mm}q(0)=0,\hspace*{5mm}\dot{q}(0)=0,$$
+after defining the variable $\dot{q}=i$. We easily rewrite this as a first order system of linear equations. Setting $$\textbf{y}= \begin{pmatrix}
+y(1)\\
+y(2)\\
+\end{pmatrix} = \begin{pmatrix}
+q\\
+\dot{q}\\
+\end{pmatrix},$$
+this gives
+%$$ \left.\begin{array}{lll}
+%\dot{y}(1) & = & y(2)\\
+%\dot{y}(2) & = & -\frac{R}{L}y(2) - \frac{1}{LC}y(1) + %\frac{E}{L}
+%\end{array}\right. $$
 $$\begin{pmatrix}
-\dot{y_1}\\
-\dot{y_2}\\
+\dot{y}(1)\\
+\dot{y}(2)\\
 \end{pmatrix}= \begin{pmatrix}
 0 & 1\\
 - \frac{1}{LC} & -\frac{R}{L}\\
+\end{pmatrix}\begin{pmatrix}
+y(1)\\
+y(2)\\
 \end{pmatrix}
 + \begin{pmatrix}
 0\\
 E\\
-\end{pmatrix}$$
+\end{pmatrix}.$$
+Lets define the matrix 
+$$A=\begin{pmatrix}
+0 & 1\\
+- \frac{1}{LC} & -\frac{R}{L}\\
+\end{pmatrix}$$ for some parameters $R$, $L$, $C$.
+
+This problem is linear and the stability analysis of the problem is therefore quite straightforward. The problem will be stable if \red{(and only if?)} all the eigenvalues of A are negatives. Assume any combination of $R$, $L$, $C$ that are all positives, we have $\det(A)=\dfrac{1}{LC}>0$ and $\text{trace}(A)=-\frac{R}{L}<0$. This clearly ensures that all eigenvalues are negative and guaranties stability.
+
+Below is our Matlab code for this question.
+\lstinputlisting{LAB1_1.m}% for a file
+
+The solution of the equation is shown on figure \red{todo} for al the values of R. We see that increasing R, tends to slow down the reaction of the system \red{check}. Obviously we observe that the derivative of the solution $q(t)$ is well represented on the graph.
+ 
