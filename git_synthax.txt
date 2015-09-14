@@ -17,8 +17,7 @@ git pull (update ce qui est en ligne, il te dit le sconflits, open documents et 
 git commit-am (facultatif je crois )
 git push
 mettre pass word et identifiant 
-UserName: FlorentinG
-mdp : pmolik45
+
 
 
 
