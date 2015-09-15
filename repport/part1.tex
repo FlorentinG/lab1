@@ -34,10 +34,21 @@ $$A=\begin{pmatrix}
 - \frac{1}{LC} & -\frac{R}{L}\\
 \end{pmatrix}$$ for some parameters $R$, $L$, $C$.
 
-This problem is linear and the stability analysis of the problem is therefore quite straightforward. The problem will be stable if \red{(and only if?)} all the eigenvalues of A are negatives. Assume any combination of $R$, $L$, $C$ that are all positives, we have $\det(A)=\dfrac{1}{LC}>0$ and $\text{trace}(A)=-\frac{R}{L}<0$. This clearly ensures that all eigenvalues are negative and guaranties stability.
+This problem is linear and the stability analysis of the problem is therefore quite straightforward. The problem will be stable if the real part of all the eigenvalues of A are negatives. Assume any combination of $R$, $L$, $C$ that are all positives, we have $\det(A)= \lambda_1 \lambda_2 = \dfrac{1}{LC}>0$ and $\text{trace}(A)= \lambda_1 + \lambda_2 = -\frac{R}{L}<0$. This clearly ensures that all eigenvalues are negative and guaranties stability.
 
-Below is our Matlab code for this question.
-\lstinputlisting{LAB1_1.m}% for a file
+Below is our Matlab code for this question. The chosen value of $E$ was 1 because we can see in the analytical solution that it is just a scaling factor.
 
-The solution of the equation is shown on figure \red{todo} for al the values of R. We see that increasing R, tends to slow down the reaction of the system \red{check}. Obviously we observe that the derivative of the solution $q(t)$ is well represented on the graph.
+
+The solution of the equation is shown on figure \ref{result1} for al the values of R. As we saw, the system is stable for all positive values of $R,L,C$. For small values of $R$, we can see that the system is oscillating with decreasing amplitude. As $R$ increases, the system reaches the equilibrium faster. We can note that for $R=10$, the system behaves like an RC-system. This happens because the inductance becomes neglectable due to the small current.
+
+\begin{figure}
+\begin{center}
+\includegraphics[scale=0.5]{result1.eps}
+\caption{Solutions of the system in part 1 for various values of R}
+\label{result1}
+\end{center}
+\end{figure}
  
+\FloatBarrier 
+ 
+\lstinputlisting{LAB1_1.m}% for a file

@@ -1,5 +1,7 @@
 function [] = LAB1_21()
-%LAB1_21 
+%LAB1_21
+%Matlab code for part 2a
+%Author : David Weicker and Florentin Goyens
 close all;
 K = [0 1 4 6];
 u0 = [1 1 1]';

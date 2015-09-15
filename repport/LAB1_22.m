@@ -1,5 +1,7 @@
 function [sol,lambda] = LAB1_22()
-%LAB1 
+%LAB1_22
+%Matlab code for part 2b
+%Author : David Weicker and Florentin Goyens
 close all;
 
 approx = [8 -5 2; -8 5 2; 9 3 7; -9 -3 7];

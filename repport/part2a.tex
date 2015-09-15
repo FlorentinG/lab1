@@ -39,7 +39,7 @@ y''(0)
 \end{array} \right) 
 \end{eqnarray*}
 
-The solutions, computed analytically for different values of K, are given in figure \ref{result21}. The Matlab code is given at the end of this section. It is possbile to see that for the first three values of K, the maximal amplitude of the blue curve (that is the function $y$) tends to decrease. This being an LCC system, we know that a perturbation will follow the same ODE so we can conclude that the system is stable for those values of K. On the other hand, for the last value ($K=8$), this amplitude increases. Hence, the system is not stable for $K=8$. By continuity, that means that the system becomes unstable for a value of K between $4$ and $8$. Because we know nothing else, the best estimation that we can give right now is that this value is $K=6$.\red{I would remove this last sentence!} \\
+The solutions, computed analytically for different values of K, are given in figure \ref{result21}. The Matlab code is given at the end of this section. It is possbile to see that for the first three values of K, the maximal amplitude of the blue curve (that is the function $y$) tends to decrease. This being an LCC system, we know that a perturbation will follow the same ODE so we can conclude that the system is stable for those values of K. On the other hand, for the last value ($K=8$), this amplitude increases. Hence, the system is not stable for $K=8$. By continuity, that means that the system becomes unstable for a value of K between $4$ and $8$. Looking at the graphs, we can say that this value is probably arround 6.
 
 \begin{figure}
 \begin{center}
@@ -60,6 +60,9 @@ With $x$ a real number. We then plug that into the caracteristic equation.
 \begin{eqnarray*}
 \lambda ^3+3\lambda ^2+2\lambda +K=&0\\
 -x^3j-3x^2+2xj+K=&0\\
+\end{eqnarray*}
+Two complex numbers are equal if and only if their real part and their imaginary part are equal. This yields :
+\begin{eqnarray*}
 \left(\begin{array}{c}
 K-3x^2 \\ 
 2x-x^3
@@ -86,6 +89,7 @@ $$\textit{The system is unstable} \iff K>6$$
 \end{center}
 \end{figure}
 
+\FloatBarrier
 
 %Ce truc insere mon code MATLAB (nice!) 
 \lstinputlisting{LAB1_21.m}
